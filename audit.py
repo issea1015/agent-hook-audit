@@ -105,7 +105,7 @@ SETTINGS_RULES = [
     ("MEDIUM", "temp-path", re.compile(r"(^|\s|[\"'])/(tmp|var/tmp|dev/shm)/")),
     ("LOW", "delete", re.compile(r"\brm\s+-[a-zA-Z]*[rf]")),
 ]
-SCRIPT_RX = re.compile(r"""[\"']?((?:~|\$HOME|\$\{?CLAUDE_(?:PROJECT_DIR|PLUGIN_ROOT)\}?|\.{1,2}|/)[^\s\"';|&]*\.(?:py|sh|bash|zsh|js|mjs|ts))""")
+SCRIPT_RX = re.compile(r"""(?<![\w:/.])[\"']?((?:~|\$HOME|\$\{?CLAUDE_(?:PROJECT_DIR|PLUGIN_ROOT)\}?|\.{1,2}|/)[^\s\"';|&]*\.(?:py|sh|bash|zsh|js|mjs|ts))""")
 DEFAULT_SETTINGS = ("~/.claude/settings.json", ".claude/settings.json", ".claude/settings.local.json")
 
 
