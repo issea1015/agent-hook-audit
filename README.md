@@ -37,3 +37,11 @@ Allowed findings don't fail the job; the summary still counts them.
 ## Safety audit
 - Standard library Python only. No network calls, no writes except the job summary file GitHub provides.
 - Reads files in the checked-out repo; never executes the hooks or scripts it audits.
+
+## Want more?
+The same auditor ships in the **Agent Workflow Kit**, set up for your own machine: it checks user-wide and plugin
+hooks too, and a `setup-audit` skill runs it from inside Claude Code. The kit also includes 3 safety hooks, 9 workflow
+skills and 3 CLAUDE.md templates, all audited. → **https://issea1015.github.io/agent-workflow-kit/** ($29 launch price)
+
+Guide: [How to audit Claude Code hooks for malicious commands](https://issea1015.github.io/agent-workflow-kit/guides/audit-claude-code-hooks.html)
+
