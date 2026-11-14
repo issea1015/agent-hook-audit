@@ -38,6 +38,11 @@ Allowed findings don't fail the job; the summary still counts them.
 - Standard library Python only. No network calls, no writes except the job summary file GitHub provides.
 - Reads files in the checked-out repo; never executes the hooks or scripts it audits.
 
+## Audit many repos at once (no install)
+The same checks run in the cloud as an Apify actor: paste GitHub repo URLs (your org, or skill/plugin repos you are about
+to install) and get one row per repo with every finding and its severity, as JSON/CSV. $0.05 per audited repo; failed
+repos are not charged: [Claude Code Hooks & Skills Security Audit on Apify](https://apify.com/issea1015/agent-config-audit).
+
 ## Want more?
 The same auditor ships in the **Agent Workflow Kit**, set up for your own machine: it checks user-wide and plugin
 hooks too, and a `setup-audit` skill runs it from inside Claude Code. The kit also includes 3 safety hooks, 9 workflow
